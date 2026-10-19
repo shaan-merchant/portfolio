@@ -1,0 +1,16 @@
+---
+import Base from '../layouts/Base.astro';
+import { site } from '../data/site.js';
+---
+<Base title="Resume">
+  <div class="container">
+    <section>
+      <h1 class="section-title">Resume</h1>
+      <div class="btn-row" style="margin: 0 0 24px">
+        <a class="btn" href={site.resume} download>Download PDF ↓</a>
+        <a class="btn" href={site.resume} target="_blank" rel="noopener">Open in new tab ↗</a>
+      </div>
+      <iframe class="resume-frame" src={site.resume} title="Resume PDF"></iframe>
+    </section>
+  </div>
+</Base>

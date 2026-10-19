@@ -1,0 +1,86 @@
+---
+import Base from '../layouts/Base.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import ContactLinks from '../components/ContactLinks.astro';
+import { site } from '../data/site.js';
+import { projects } from '../data/projects.js';
+
+const highlights = [
+  { when: '2022 to 2024', what: 'Built dAIgnose, $1,750 in research grants' },
+  { when: '2024', what: 'FIRST Dean’s List Award, top 10 of 80,000+ globally' },
+  { when: '2024', what: 'Plant Guardian, student merit EPA Award' },
+  { when: 'Spring 2025', what: '3rd place, University Rover Challenge with NURover' },
+  { when: 'Summer 2025', what: 'Teaching assistant for FPGA and embedded systems, 90+ students' },
+  { when: 'Present', what: 'Computer Engineering + CS @ Northeastern University' },
+];
+---
+<Base>
+  <div class="container">
+    <section class="hero">
+      <h1>{site.name}</h1>
+      <p class="tagline"><span class="typed" data-words="Robotics|Electronics|Applied AI|Computer Engineering + CS">Robotics</span></p>
+      <img class="avatar" src="/images/headshot.jpg" alt={`Portrait of ${site.name}`} />
+    </section>
+
+    <section id="about">
+      <div class="about-grid">
+        <div>
+          <h2 class="section-title">About</h2>
+          <p>
+            Hi, I'm Shaan! I'm a second-year computer engineering and computer science student at Northeastern
+            University with a strong interest and portfolio in robotics, electronics, and applied AI. I'm passionate
+            about creative problem-solving and leveraging technology to make a real-world impact, one solution at a time.
+          </p>
+          <p>
+            Outside of engineering, I enjoy hiking, grabbing pho with friends, reading, and volunteering to teach STEM
+            in my community.
+          </p>
+          <div class="btn-row">
+            <a class="btn" href="/projects">Projects →</a>
+            <a class="btn" href="/resume">Resume →</a>
+          </div>
+        </div>
+        <img src="/images/about.jpg" alt="In the lab" />
+      </div>
+    </section>
+
+    <section id="highlights">
+      <h2 class="section-title">Highlights</h2>
+      <ul class="highlights">
+        {highlights.map((h) => <li><span class="when">{h.when}</span>{h.what}</li>)}
+      </ul>
+    </section>
+
+    <section id="projects">
+      <h2 class="section-title">Projects</h2>
+      <div class="grid">
+        {projects.map((p) => <ProjectCard project={p} />)}
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2 class="section-title">Let's Connect</h2>
+      <ContactLinks />
+    </section>
+  </div>
+
+  <script>
+    const el = document.querySelector('.typed');
+    if (el && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      const words = el.dataset.words.split('|');
+      let w = 0, i = words[0].length, deleting = true;
+      const tick = () => {
+        const word = words[w];
+        el.textContent = word.slice(0, i);
+        if (deleting) {
+          if (i-- === 0) { deleting = false; w = (w + 1) % words.length; i = 0; }
+          setTimeout(tick, i === word.length - 1 ? 1600 : 45);
+        } else {
+          if (i++ === words[w].length) { deleting = true; i = words[w].length; setTimeout(tick, 1600); return; }
+          setTimeout(tick, 85);
+        }
+      };
+      setTimeout(tick, 1600);
+    }
+  </script>
+</Base>

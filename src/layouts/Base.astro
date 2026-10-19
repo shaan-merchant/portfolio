@@ -1,0 +1,64 @@
+---
+import '../styles/global.css';
+import { site } from '../data/site.js';
+
+const { title, description = `${site.name}: robotics, electronics, and applied AI.` } = Astro.props;
+const path = Astro.url.pathname.replace(/\/$/, '') || '/';
+const nav = [
+  { href: '/', label: 'Home' },
+  { href: '/#about', label: 'About' },
+  { href: '/projects', label: 'Projects' },
+  { href: '/resume', label: 'Resume' },
+  { href: '/#contact', label: 'Contact' },
+];
+const current = (href) => (href === path || (href === '/projects' && path.startsWith('/projects')) ? 'page' : undefined);
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title ? `${title} | ${site.name}` : site.name}</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content={title ?? site.name} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content="/images/headshot.jpg" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="container">
+        <a class="brand" href="/">{site.title}</a>
+        <button class="menu-btn" aria-label="Toggle menu" aria-expanded="false">
+          <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16" /></svg>
+        </button>
+        <ul>
+          {nav.map((n) => <li><a href={n.href} aria-current={current(n.href)}>{n.label}</a></li>)}
+        </ul>
+      </div>
+    </nav>
+    <main>
+      <slot />
+    </main>
+    <footer>
+      <div class="container">
+        <span>© {new Date().getFullYear()} {site.name}</span>
+        <span><a href={`mailto:${site.email}`}>{site.email}</a> · {site.phone}</span>
+      </div>
+    </footer>
+    <script>
+      const btn = document.querySelector('.menu-btn');
+      const list = document.querySelector('.nav ul');
+      btn?.addEventListener('click', () => {
+        const open = list.classList.toggle('open');
+        btn.setAttribute('aria-expanded', String(open));
+      });
+      list?.addEventListener('click', (e) => {
+        if (e.target.closest('a')) list.classList.remove('open');
+      });
+    </script>
+  </body>
+</html>
