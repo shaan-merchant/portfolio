@@ -171,7 +171,7 @@ export const projects = [
       },
       {
         label: 'Result',
-        text: 'The neural network performed classification with 99.54% accuracy and 0.0153 loss. The system successfully identified blight in tomato crops and sent a text message with the crop location and treatment options. Awarded $600 in grants from regional competitions and received the student merit EPA Award.',
+        text: 'The neural network performed classification with 99.54% accuracy and 0.0153 loss. The system successfully identified blight in tomato crops and sent a text message with the crop location and treatment options. Awarded $600 in grants from regional competitions and received EPA Merit Award.',
       },
     ],
     media: [{ type: 'image', src: '/images/plant-guardian-poster.jpg', caption: 'Research poster' }],
