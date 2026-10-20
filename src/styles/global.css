@@ -4,7 +4,7 @@
   --muted: #6b7280;
   --line: #e5e7eb;
   --card: #f7f7f8;
-  --accent: #c8102e; /* Northeastern red */
+  --accent: #1f3a93; /* navy */
   --maxw: 1040px;
   --font: 'Geist Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 }
@@ -16,7 +16,7 @@
     --muted: #9ca3af;
     --line: #262626;
     --card: #161616;
-    --accent: #ff5c6c;
+    --accent: #8fa8ff;
   }
 }
 
