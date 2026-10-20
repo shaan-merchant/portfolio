@@ -109,7 +109,7 @@ export const projects = [
     sections: [
       {
         label: 'Overview',
-        text: 'Led a 130+ member FIRST Robotics team, directing the design and fabrication of a cascading elevator and disc shooter while overseeing Build, Systems, and Competition divisions to coordinate cross-team execution and technical decision making. Led mechanical, electrical, and software integration for the 2024 robot.',
+        text: 'As Build and Design Lead of a 130+ member FIRST Robotics team, oversaw the Build, Systems, and Competition divisions, coordinating execution and technical decisions across teams. Directed the design and fabrication of a cascading elevator and disc shooter, and drove mechanical, electrical, and software integration for the 2024 robot.',
       },
       {
         label: 'Result',
