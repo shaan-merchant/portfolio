@@ -95,7 +95,7 @@ export const projects = [
       },
     ],
     media: [
-      { type: 'video', src: '/videos/hexapod-demo.mp4', poster: '/videos/hexapod-demo.jpg', caption: 'Hexapod walking' },
+      { type: 'video', src: '/videos/hexapod-demo.mp4', poster: '/videos/hexapod-demo.jpg', caption: 'Hexapod Walking Student Demo' },
     ],
   },
   {
