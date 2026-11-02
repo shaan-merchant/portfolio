@@ -221,8 +221,7 @@ section { padding: 72px 0; }
   --hole: #052a14;
   --silk: #eef1f8;
   position: relative;
-  max-width: 760px;
-  padding: 44px 40px 40px;
+  padding: 44px 40px 48px;
   border-radius: 14px;
   color: var(--silk);
   background:
@@ -241,7 +240,87 @@ section { padding: 72px 0; }
   opacity: 0.7;
   margin: 0 0 22px 4px;
 }
-.silk-end { text-align: right; margin: 18px 4px 0 0; }
+.silk-end { text-align: right; margin: 0 4px 0 0; }
+
+.pcb-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 170px;
+  gap: 32px;
+}
+.pcb-art {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 24px;
+}
+.pcb-art figure { margin: 0; text-align: center; opacity: 0.8; }
+.pcb-art svg {
+  width: 110px;
+  height: auto;
+  fill: none;
+  stroke: var(--silk);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.pcb-art figcaption { font-size: 0.6rem; letter-spacing: 0.14em; margin-top: 6px; }
+
+.pcb-foot {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 24px;
+  margin-top: 36px;
+}
+
+/* J1: clickable pin header */
+.j1-label { display: block; font-size: 0.68rem; letter-spacing: 0.14em; opacity: 0.7; margin: 0 0 8px 4px; }
+.j1-body {
+  position: relative;
+  display: flex;
+  gap: 36px;
+  padding: 8px 14px 30px;
+  border: 1.5px solid rgba(238, 241, 248, 0.7);
+  border-radius: 4px;
+}
+/* pin 1 marker */
+.j1-body::before {
+  content: '';
+  position: absolute;
+  left: -9px;
+  top: 12px;
+  border: 5px solid transparent;
+  border-left-color: var(--silk);
+}
+.pin {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: var(--silk);
+}
+.pin i {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--hole) 0 4px, var(--copper) 4.5px);
+  transition: box-shadow 0.15s, filter 0.15s;
+}
+.pin1 i { border-radius: 3px; } /* pin 1 gets a square pad */
+.pin span {
+  position: absolute;
+  top: 30px;
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  white-space: nowrap;
+  opacity: 0.75;
+}
+a.pin:hover i, a.pin:focus-visible i { filter: brightness(1.25); box-shadow: 0 0 10px 2px rgba(255, 200, 140, 0.55); }
+a.pin:hover span, a.pin:focus-visible span { opacity: 1; text-decoration: underline; text-underline-offset: 3px; }
+.gnd { cursor: help; }
 
 .highlights { list-style: none; padding: 0; margin: 0; }
 .highlights li {
@@ -290,6 +369,13 @@ section { padding: 72px 0; }
 }
 @keyframes led { 50% { box-shadow: 0 0 4px 1px rgba(74, 222, 128, 0.3); } }
 @media (prefers-reduced-motion: reduce) { .highlights li.live::before { animation: none; } }
+
+@media (max-width: 760px) {
+  .pcb-body { grid-template-columns: 1fr; }
+  .pcb-art { display: grid; grid-template-columns: repeat(4, 1fr); align-items: end; gap: 8px; }
+  .pcb-art svg { width: 54px; }
+  .pcb-art figcaption { font-size: 0.5rem; letter-spacing: 0.08em; }
+}
 
 @media (max-width: 600px) {
   .pcb { padding: 40px 18px 36px; }
