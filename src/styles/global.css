@@ -8,8 +8,6 @@
   --maxw: 1040px;
   --font: 'Geist Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   --font-head: 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  --grid: rgba(31, 58, 147, 0.045);
-  --grid-major: rgba(31, 58, 147, 0.08);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -20,8 +18,6 @@
     --line: #262626;
     --card: #161616;
     --accent: #8fa8ff;
-    --grid: rgba(143, 168, 255, 0.04);
-    --grid-major: rgba(143, 168, 255, 0.075);
   }
 }
 
@@ -31,14 +27,7 @@ html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
-  background-color: var(--bg);
-  /* faint CAD grid: minor lines every 24px, major every 120px */
-  background-image:
-    linear-gradient(var(--grid-major) 1px, transparent 1px),
-    linear-gradient(90deg, var(--grid-major) 1px, transparent 1px),
-    linear-gradient(var(--grid) 1px, transparent 1px),
-    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
-  background-size: 120px 120px, 120px 120px, 24px 24px, 24px 24px;
+  background: var(--bg);
   color: var(--fg);
   font-family: var(--font);
   font-size: 15px;
