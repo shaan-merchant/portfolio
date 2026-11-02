@@ -40,7 +40,7 @@ export const projects = [
       'Brushless 3-axis gimbal that stabilizes drone video in flight, with internal cable routing and a custom camera PCB, at roughly 60% less than a store-bought gimbal.',
     card: '/images/gimbal-card.svg',
     timeline: 'Fall 2026 · In development',
-    tags: ['Fusion 360', '3D Printing', 'PCB Design', 'NVIDIA Jetson', 'I2C'],
+    tags: ['Fusion 360', '3D Printing', 'PCB Design', 'PID Control', 'NVIDIA Jetson', 'I2C'],
     sections: [
       {
         label: 'Problem',
@@ -56,7 +56,7 @@ export const projects = [
       },
       {
         label: 'Result',
-        text: 'The current design cuts cost by roughly 60% compared to a store-bought gimbal. The project is still in development, and I will be responsible for integration and PID tuning next.',
+        text: 'Ran PID simulations to find starting gains for each axis to reduce vibration and jitter. The current design cuts cost by roughly 60% compared to a store-bought gimbal. The project is still in development, and I will be responsible for integration and tuning those gains on the hardware next.',
       },
     ],
     media: [],
