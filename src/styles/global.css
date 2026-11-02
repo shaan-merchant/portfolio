@@ -7,6 +7,8 @@
   --accent: #1f3a93; /* navy */
   --maxw: 1040px;
   --font: 'Geist Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --grid: rgba(31, 58, 147, 0.045);
+  --grid-major: rgba(31, 58, 147, 0.08);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,6 +19,8 @@
     --line: #262626;
     --card: #161616;
     --accent: #8fa8ff;
+    --grid: rgba(143, 168, 255, 0.04);
+    --grid-major: rgba(143, 168, 255, 0.075);
   }
 }
 
@@ -26,7 +30,14 @@ html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
-  background: var(--bg);
+  background-color: var(--bg);
+  /* faint CAD grid: minor lines every 24px, major every 120px */
+  background-image:
+    linear-gradient(var(--grid-major) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-major) 1px, transparent 1px),
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 120px 120px, 120px 120px, 24px 24px, 24px 24px;
   color: var(--fg);
   font-family: var(--font);
   font-size: 15px;
@@ -212,20 +223,87 @@ section { padding: 72px 0; }
 .media iframe { width: 100%; aspect-ratio: 16 / 9; border: 0; border-radius: 10px; }
 .media figcaption { text-align: center; font-size: 0.8rem; color: var(--muted); margin-top: 8px; }
 
-/* Bio timeline-ish highlights */
-.highlights { list-style: none; padding: 0; margin: 0; border-left: 2px solid var(--line); }
-.highlights li { position: relative; padding: 0 0 22px 22px; }
+/* Timeline drawn as a PCB: navy solder mask, copper trace, vias, silkscreen */
+.pcb {
+  --mask: #13285e;
+  --copper: #c98a4b;
+  --hole: #0a1638;
+  --silk: #eef1f8;
+  position: relative;
+  max-width: 760px;
+  padding: 44px 40px 40px;
+  border-radius: 14px;
+  color: var(--silk);
+  background:
+    radial-gradient(circle at 20px 20px, var(--hole) 0 5px, var(--copper) 5.5px 9px, transparent 9.5px),
+    radial-gradient(circle at calc(100% - 20px) 20px, var(--hole) 0 5px, var(--copper) 5.5px 9px, transparent 9.5px),
+    radial-gradient(circle at 20px calc(100% - 20px), var(--hole) 0 5px, var(--copper) 5.5px 9px, transparent 9.5px),
+    radial-gradient(circle at calc(100% - 20px) calc(100% - 20px), var(--hole) 0 5px, var(--copper) 5.5px 9px, transparent 9.5px),
+    var(--mask);
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.06), 0 10px 30px rgba(19, 40, 94, 0.18);
+}
+.silk {
+  display: block;
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  opacity: 0.7;
+  margin: 0 0 22px 4px;
+}
+.silk-end { text-align: right; margin: 18px 4px 0 0; }
+
+.highlights { list-style: none; padding: 0; margin: 0; }
+.highlights li {
+  position: relative;
+  padding: 0 0 24px 58px;
+  /* trace segment from this via down to the next one */
+  background: linear-gradient(var(--copper), var(--copper)) no-repeat 18px 9px / 4px 100%;
+}
+.highlights li:last-child { padding-bottom: 0; background: none; }
+/* via */
 .highlights li::before {
   content: '';
   position: absolute;
-  left: -7px;
-  top: 6px;
-  width: 12px;
-  height: 12px;
+  left: 11px;
+  top: 0;
+  width: 18px;
+  height: 18px;
   border-radius: 50%;
-  background: var(--muted);
+  background: radial-gradient(circle, var(--hole) 0 3.5px, var(--copper) 4px);
 }
-.highlights .when { display: block; font-size: 0.72rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; }
+/* stub trace from via to the label */
+.highlights li::after {
+  content: '';
+  position: absolute;
+  left: 29px;
+  top: 7.5px;
+  width: 20px;
+  height: 3px;
+  background: var(--copper);
+}
+.highlights .when {
+  display: block;
+  font-size: 0.72rem;
+  line-height: 18px;
+  color: var(--copper);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.highlights .ref { color: var(--silk); opacity: 0.45; margin-right: 10px; }
+
+/* Present entries light up like a status LED */
+.highlights li.live::before {
+  background: radial-gradient(circle, #eaffe6 0 2px, #4ade80 3.5px, #15803d 9px);
+  box-shadow: 0 0 10px 2px rgba(74, 222, 128, 0.55);
+  animation: led 2.4s ease-in-out infinite;
+}
+@keyframes led { 50% { box-shadow: 0 0 4px 1px rgba(74, 222, 128, 0.3); } }
+@media (prefers-reduced-motion: reduce) { .highlights li.live::before { animation: none; } }
+
+@media (max-width: 600px) {
+  .pcb { padding: 40px 18px 36px; }
+  .highlights li { padding-left: 50px; }
+  .highlights li::after { width: 14px; }
+}
 
 /* Resume */
 .resume-frame { width: 100%; height: 85vh; border: 1px solid var(--line); border-radius: 10px; }

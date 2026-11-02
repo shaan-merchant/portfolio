@@ -49,9 +49,18 @@ const highlights = [
 
     <section id="highlights">
       <h2 class="section-title">Highlights</h2>
-      <ul class="highlights">
-        {highlights.map((h) => <li><span class="when">{h.when}</span>{h.what}</li>)}
-      </ul>
+      <div class="pcb">
+        <span class="silk">SM-TIMELINE · REV {new Date().getFullYear()}</span>
+        <ul class="highlights">
+          {highlights.map((h, i) => (
+            <li class:list={[{ live: h.when === 'Present' }]}>
+              <span class="when"><span class="ref">TP{i + 1}</span>{h.when}</span>
+              {h.what}
+            </li>
+          ))}
+        </ul>
+        <span class="silk silk-end">DESIGNED BY S. MERCHANT</span>
+      </div>
     </section>
 
     <section id="projects">
