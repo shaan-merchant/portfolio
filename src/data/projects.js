@@ -10,7 +10,7 @@ export const projects = [
     summary:
       'Drone-mounted sensor payload built around a Raspberry Pi and I2C sensors, taken from systems engineering through field testing. Details under NDA.',
     card: '/images/drone-payload-card.svg',
-    timeline: '2026',
+    timeline: 'Fall 2026',
     tags: ['Raspberry Pi', 'I2C', 'Sensor Fusion', 'Fusion 360', 'Field Testing'],
     sections: [
       {
