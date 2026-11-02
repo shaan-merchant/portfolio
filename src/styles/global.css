@@ -182,7 +182,29 @@ section { padding: 72px 0; }
 .card .more { font-weight: 700; font-size: 0.85rem; margin-top: auto; }
 .card:hover .more { text-decoration: underline; text-underline-offset: 4px; }
 
+.nda-badge {
+  margin-left: 8px;
+  padding: 1px 6px;
+  border: 1px solid #e5484d;
+  border-radius: 4px;
+  color: #e5484d;
+  font-size: 0.65rem;
+}
+
 /* Project page */
+.nda-note {
+  max-width: 720px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 8px 0 8px;
+  padding: 14px 18px;
+  border: 1px dashed #e5484d;
+  border-radius: 10px;
+  font-size: 0.9rem;
+}
+.nda-note strong { color: #e5484d; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; }
+.writeup:last-child { padding-bottom: 80px; }
 .project-head { padding: 56px 0 24px; }
 .back { font-size: 0.85rem; text-decoration: none; color: var(--muted); }
 .back:hover { color: var(--fg); }

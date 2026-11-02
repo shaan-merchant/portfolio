@@ -20,6 +20,13 @@ const { project } = Astro.props;
       {project.tags && <div class="tags">{project.tags.map((t) => <span class="tag">{t}</span>)}</div>}
     </header>
 
+    {project.nda && (
+      <aside class="nda-note">
+        <strong>Under NDA</strong>
+        <span>This project is confidential, so there are no photos, CAD, or specifics here. Happy to talk through what I can in an interview.</span>
+      </aside>
+    )}
+
     <article class="writeup">
       {project.sections.map((s) => (
         <>
@@ -34,15 +41,17 @@ const { project } = Astro.props;
       )}
     </article>
 
-    <div class="media">
-      {project.media.map((m) => (
-        <figure>
-          {m.type === 'image' && <img src={m.src} alt={m.caption} loading="lazy" />}
-          {m.type === 'video' && <video src={m.src} poster={m.poster} controls muted playsinline preload="none" />}
-          {m.type === 'embed' && <iframe src={m.src} title={m.caption} loading="lazy" allowfullscreen />}
-          {m.caption && <figcaption>{m.caption}</figcaption>}
-        </figure>
-      ))}
-    </div>
+    {project.media.length > 0 && (
+      <div class="media">
+        {project.media.map((m) => (
+          <figure>
+            {m.type === 'image' && <img src={m.src} alt={m.caption} loading="lazy" />}
+            {m.type === 'video' && <video src={m.src} poster={m.poster} controls muted playsinline preload="none" />}
+            {m.type === 'embed' && <iframe src={m.src} title={m.caption} loading="lazy" allowfullscreen />}
+            {m.caption && <figcaption>{m.caption}</figcaption>}
+          </figure>
+        ))}
+      </div>
+    )}
   </div>
 </Base>

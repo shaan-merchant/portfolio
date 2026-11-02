@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#18703f"/><stop offset="1" stop-color="#0f4f2c"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#g)"/>
+  <g fill="#052a14" stroke="#c98a4b" stroke-width="5">
+    <circle cx="28" cy="28" r="9"/><circle cx="772" cy="28" r="9"/><circle cx="28" cy="472" r="9"/><circle cx="772" cy="472" r="9"/>
+  </g>
+  <g fill="none" stroke="#eef1f8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" opacity="0.85" transform="translate(250 90) scale(3)">
+    <path d="M43 43 26 26M57 43 74 26M43 57 26 74M57 57 74 74"/>
+    <rect x="38" y="38" width="24" height="24" rx="5"/>
+    <g stroke-dasharray="5 4"><circle cx="21" cy="21" r="15"/><circle cx="79" cy="21" r="15"/><circle cx="21" cy="79" r="15"/><circle cx="79" cy="79" r="15"/></g>
+    <path d="M12 16l18 10M70 26l18-10M12 84l18-10M70 74l18 10"/>
+    <rect x="42" y="66" width="16" height="12" rx="2"/>
+    <path d="M50 62v4"/>
+  </g>
+  <g transform="rotate(-12 400 250)">
+    <rect x="215" y="205" width="370" height="90" rx="8" fill="none" stroke="#e5484d" stroke-width="7"/>
+    <text x="400" y="266" text-anchor="middle" font-family="monospace" font-size="50" font-weight="700" letter-spacing="8" fill="#e5484d">CLASSIFIED</text>
+  </g>
+  <text x="400" y="458" text-anchor="middle" font-family="monospace" font-size="20" letter-spacing="5" fill="#eef1f8" opacity="0.7">PAYLOAD · DETAILS UNDER NDA</text>
+</svg>

@@ -3,6 +3,36 @@
 
 export const projects = [
   {
+    slug: 'drone-sensor-payload',
+    title: 'Drone Sensor Payload',
+    org: 'Iwa Robotics',
+    nda: true,
+    summary:
+      'Drone-mounted sensor payload built around a Raspberry Pi and I2C sensors, taken from systems engineering through field testing. Details under NDA.',
+    card: '/images/drone-payload-card.svg',
+    timeline: '2026',
+    tags: ['Raspberry Pi', 'I2C', 'Sensor Fusion', 'Fusion 360', 'Field Testing'],
+    sections: [
+      {
+        label: 'Overview',
+        text: 'A sensor payload for a drone, developed during my robotics engineering co-op at Iwa Robotics. The specifics are covered by an NDA, so this write-up focuses on my role and process rather than the application.',
+      },
+      {
+        label: 'My Role',
+        text: 'Handled systems engineering for the payload, taking the device from requirements through integration on the drone. The system is built around a Raspberry Pi, with I2C handling communication between the Pi and the onboard sensors.',
+      },
+      {
+        label: 'Build',
+        text: 'Assembled and debugged the electronics by hand with soldering and a multimeter, and used Fusion 360 and 3D printing to fit the hardware onto the drone. Used Claude Code to speed up development of the software running on the Pi.',
+      },
+      {
+        label: 'Testing',
+        text: 'Tested and calibrated the full system on the drone, including field testing, and applied sensor fusion to combine readings from multiple sensors into reliable data.',
+      },
+    ],
+    media: [],
+  },
+  {
     slug: 'moteus-n1-interface-pcb',
     title: 'Moteus N1 Interface PCB',
     org: 'NURover',
