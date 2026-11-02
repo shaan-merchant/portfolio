@@ -33,6 +33,35 @@ export const projects = [
     media: [],
   },
   {
+    slug: 'drone-gimbal',
+    title: '3-Axis Drone Gimbal',
+    org: 'Iwa Robotics',
+    summary:
+      'Brushless 3-axis gimbal that stabilizes drone video in flight, with internal cable routing and a custom camera PCB, at roughly 60% less than a store-bought gimbal.',
+    card: '/images/gimbal-card.svg',
+    timeline: 'Fall 2026 · In development',
+    tags: ['Fusion 360', '3D Printing', 'PCB Design', 'NVIDIA Jetson', 'I2C'],
+    sections: [
+      {
+        label: 'Problem',
+        text: 'Video from the drone camera needs to stay steady in flight, and the stabilized feed has to reach both the flight controller and an NVIDIA Jetson for onboard processing. Store-bought gimbals that could do this were expensive.',
+      },
+      {
+        label: 'Prototyping',
+        text: 'Designed the full system end to end, scoping both the electronics and the mechanical design. Modeled the gimbal in Fusion 360 and built a 3D printed prototype. The biggest challenge was routing the wiring internally while still allowing continuous rotation on each axis.',
+      },
+      {
+        label: 'Current Design',
+        text: 'Redesigned the gimbal around brushless gimbal motors with through holes, so cables run through the motors and frame instead of wrapping around the outside. A compact 3-axis gimbal controller drives the three motors over I2C with the IMU and encoders, and its software allows PID tuning on each axis. I also designed a custom PCB that connects the cameras to the Jetson.',
+      },
+      {
+        label: 'Result',
+        text: 'The current design cuts cost by roughly 60% compared to a store-bought gimbal. The project is still in development, and I will be responsible for integration and PID tuning next.',
+      },
+    ],
+    media: [],
+  },
+  {
     slug: 'moteus-n1-interface-pcb',
     title: 'Moteus N1 Interface PCB',
     org: 'NURover',
