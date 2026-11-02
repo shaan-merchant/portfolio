@@ -16,9 +16,5 @@
     <rect x="42" y="66" width="16" height="12" rx="2"/>
     <path d="M50 62v4"/>
   </g>
-  <g transform="rotate(-12 400 250)">
-    <rect x="215" y="205" width="370" height="90" rx="8" fill="none" stroke="#e5484d" stroke-width="7"/>
-    <text x="400" y="266" text-anchor="middle" font-family="monospace" font-size="50" font-weight="700" letter-spacing="8" fill="#e5484d">CLASSIFIED</text>
-  </g>
   <text x="400" y="458" text-anchor="middle" font-family="monospace" font-size="20" letter-spacing="5" fill="#eef1f8" opacity="0.7">PAYLOAD · DETAILS UNDER NDA</text>
 </svg>
