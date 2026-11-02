@@ -40,11 +40,11 @@ export const projects = [
       'Brushless 3-axis gimbal that stabilizes drone video in flight, with internal cable routing and a custom camera PCB, at roughly 60% less than a store-bought gimbal.',
     card: '/images/gimbal-card.svg',
     timeline: 'Fall 2026 · In development',
-    tags: ['Fusion 360', '3D Printing', 'PCB Design', 'PID Control', 'Python', 'NVIDIA Jetson', 'I2C'],
+    tags: ['Fusion 360', '3D Printing', 'PCB Design', 'PID Control', 'Python', 'NVIDIA Jetson', 'I2C', 'NDAA Compliance'],
     sections: [
       {
         label: 'Problem',
-        text: 'Video from the drone camera needs to stay steady in flight, and the stabilized feed has to reach both the flight controller and an NVIDIA Jetson for onboard processing. Store-bought gimbals that could do this were expensive.',
+        text: 'Video from the drone camera needs to stay steady in flight, and the stabilized feed has to reach both the flight controller and an NVIDIA Jetson for onboard processing. The gimbal also had to be NDAA compliant, which limited which components and off-the-shelf options could be used, and store-bought gimbals that could do this were expensive.',
       },
       {
         label: 'Prototyping',
