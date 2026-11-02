@@ -37,26 +37,30 @@ export const projects = [
     title: '3-Axis Drone Gimbal',
     org: 'Iwa Robotics',
     summary:
-      'Brushless 3-axis gimbal that stabilizes drone video in flight, with internal cable routing and a custom camera PCB, at roughly 60% less than a store-bought gimbal.',
+      'Custom 3-axis brushless gimbal that stabilizes drone video in flight, built to be NDAA compliant at roughly 60% less than a store-bought gimbal.',
     card: '/images/gimbal-card.svg',
     timeline: 'Fall 2026 · In development',
     tags: ['Fusion 360', '3D Printing', 'PCB Design', 'PID Control', 'Python', 'NVIDIA Jetson', 'I2C', 'NDAA Compliance'],
     sections: [
       {
         label: 'Problem',
-        text: 'Video from the drone camera needs to stay steady in flight, and the stabilized feed has to reach both the flight controller and an NVIDIA Jetson for onboard processing. The gimbal also had to be NDAA compliant, which limited which components and off-the-shelf options could be used, and store-bought gimbals that could do this were expensive.',
+        text: 'Drone video has to stay steady in flight, and the stabilized feed needs to reach both the flight controller and an NVIDIA Jetson for onboard processing. The solution also had to be NDAA compliant, which narrowed the field of usable components, and the store-bought gimbals that could do the job were expensive.',
       },
       {
         label: 'Prototyping',
-        text: 'Designed the full system end to end, scoping both the electronics and the mechanical design. Modeled the gimbal in Fusion 360 and built a 3D printed prototype. The biggest challenge was routing the wiring internally while still allowing continuous rotation on each axis.',
+        text: 'Designed the whole system end to end, scoping the electronics and mechanical design together. Modeled the gimbal in Fusion 360 and built a 3D printed prototype, which exposed the core challenge: routing wiring through the gimbal while still allowing continuous rotation on every axis.',
       },
       {
         label: 'Current Design',
-        text: 'Redesigned the gimbal around brushless gimbal motors with through holes, so cables run through the motors and frame instead of wrapping around the outside. A compact 3-axis gimbal controller drives the three motors over I2C with the IMU and encoders, and its software allows PID tuning on each axis. I also designed a custom PCB that connects the cameras to the Jetson.',
+        text: 'Redesigned the gimbal around brushless motors with through holes, so cables pass through the motors and frame instead of wrapping around the outside. A compact 3-axis gimbal controller ties the IMU, encoders, and motor drivers together over I2C, and a custom PCB I designed connects the cameras to the Jetson.',
       },
       {
         label: 'Result',
-        text: 'Built a Python PID simulation tool with Claude Code and used it to find starting gains for each axis to reduce vibration and jitter. The current design cuts cost by roughly 60% compared to a store-bought gimbal. The project is still in development, and I will be responsible for integration and tuning those gains on the hardware next.',
+        text: 'Built a Python PID simulation tool with Claude Code to find starting gains for each axis that minimize vibration and jitter. The design comes in roughly 60% cheaper than a comparable store-bought gimbal.',
+      },
+      {
+        label: 'Next Steps',
+        text: 'The gimbal is still in development. Next, I am responsible for integrating the full system and tuning the simulated gains on the real hardware.',
       },
     ],
     media: [],
