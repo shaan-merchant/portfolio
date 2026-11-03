@@ -56,7 +56,7 @@ export const projects = [
       },
       {
         label: 'Current Design',
-        text: 'Redesigned around brushless motors with through holes to route cables internally. A 3-axis gimbal controller connects the IMU, encoders, and motor drivers over I2C, and a custom PCB I designed interfaces the cameras with the Jetson.',
+        text: 'Redesigned around brushless motors with through holes, routing power for the motors, encoders, IMU, and cameras internally through the frame. A 3-axis gimbal controller connects the IMU, encoders, and motor drivers over I2C, and a custom PCB I designed interfaces the cameras with the Jetson.',
       },
       {
         label: 'Result',
