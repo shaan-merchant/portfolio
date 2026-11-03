@@ -46,7 +46,7 @@ export const projects = [
       'Brushless 3-axis gimbal that stabilizes drone video in flight. NDAA compliant at roughly 60% lower cost than a store-bought gimbal.',
     card: '/images/gimbal-card.svg',
     timeline: 'Fall 2026 · In development',
-    tags: ['Fusion 360', '3D Printing', 'PCB Design', 'PID Control', 'Python', 'NVIDIA Jetson', 'I2C', 'NDAA Compliance'],
+    tags: ['Fusion 360', '3D Printing', 'PCB Design', 'MIPI CSI', 'PID Control', 'Python', 'NVIDIA Jetson', 'I2C', 'NDAA Compliance'],
     sections: [
       {
         label: 'Problem',
@@ -58,7 +58,7 @@ export const projects = [
       },
       {
         label: 'Current Design',
-        text: 'Redesigned around brushless gimbal motors with through holes, routing power and signal lines for the motors, encoders, IMU, and cameras internally through the frame. A 3-axis gimbal controller connects the IMU, encoders, and motor drivers over I2C, and a custom PCB I designed interfaces the cameras with the Jetson.',
+        text: 'Redesigned around brushless gimbal motors with through holes, routing power and signal lines for the motors, encoders, IMU, and cameras internally through the frame. A 3-axis gimbal controller connects the IMU, encoders, and motor drivers over I2C, and a custom 4-layer PCB I designed handles MIPI CSI integration between the cameras and the Jetson.',
       },
       {
         label: 'Result',
