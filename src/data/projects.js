@@ -40,6 +40,8 @@ export const projects = [
     slug: 'drone-gimbal',
     title: '3-Axis Drone Gimbal',
     org: 'Iwa Robotics',
+    nda: true,
+    ndaNote: 'Parts of this project are under NDA, so no photos, CAD, or component names are shared. Happy to discuss what I can in an interview.',
     summary:
       'Brushless 3-axis gimbal that stabilizes drone video in flight. NDAA compliant at roughly 60% lower cost than a store-bought gimbal.',
     card: '/images/gimbal-card.svg',

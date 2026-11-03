@@ -23,7 +23,7 @@ const { project } = Astro.props;
     {project.nda && (
       <aside class="nda-note">
         <strong>Under NDA</strong>
-        <span>This project is confidential, so no photos, CAD, or specifics are shared. Happy to discuss what I can in an interview.</span>
+        <span>{project.ndaNote ?? 'This project is confidential, so no photos, CAD, or specifics are shared. Happy to discuss what I can in an interview.'}</span>
       </aside>
     )}
 
