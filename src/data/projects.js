@@ -85,7 +85,7 @@ export const projects = [
     sections: [
       {
         label: 'Problem',
-        text: 'Get richer telemetry from the drone motors, such as current draw, to support health monitoring and diagnostics across our aircraft.',
+        text: 'Test flights lacked diagnostics and suffered from signal noise. The goal was to pull richer telemetry from the motors, such as current draw, to monitor the health of our aircraft.',
       },
       {
         label: 'Approach',
