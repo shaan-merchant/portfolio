@@ -79,7 +79,7 @@ export const projects = [
       'Compact Moteus N1 adapter PCB integrating MR30/JST GH power breakouts, dual thermistor sensing with comparator based selection, and PWM.',
     card: '/images/moteus-card.jpg',
     timeline: 'Jan to Feb 2026',
-    tags: ['KiCad', 'PCB Design', 'Analog'],
+    tags: ['KiCad', 'PCB Design', 'Analog', 'Oscilloscope', 'Multimeter', 'Soldering', 'Crimping'],
     sections: [
       {
         label: 'Problem',
