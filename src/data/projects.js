@@ -8,10 +8,10 @@ export const projects = [
     org: 'Iwa Robotics',
     nda: true,
     summary:
-      'Raspberry Pi based sensor payload for a drone, from systems engineering through field testing. Details under NDA.',
+      'Raspberry Pi based sensor payload for a drone with a live data GUI and wireless alerts, from systems engineering through field testing. Details under NDA.',
     card: '/images/drone-payload-card.svg',
     timeline: 'Fall 2026',
-    tags: ['Raspberry Pi', 'I2C', 'Sensor Fusion', 'Fusion 360', 'Field Testing'],
+    tags: ['Raspberry Pi', 'I2C', 'Sensor Fusion', 'GUI Development', 'Data Logging', 'Fusion 360', 'Field Testing'],
     sections: [
       {
         label: 'Overview',
@@ -23,7 +23,11 @@ export const projects = [
       },
       {
         label: 'Build',
-        text: 'Assembled and debugged the electronics through soldering and multimeter testing. Used Fusion 360 and 3D printing to mount the hardware to the drone, and Claude Code to accelerate software development on the Pi.',
+        text: 'Assembled and debugged the electronics through soldering and multimeter testing, and used Fusion 360 and 3D printing to mount the hardware to the drone.',
+      },
+      {
+        label: 'Software',
+        text: 'Developed a GUI that displays live sensor data in graphs with data logging, and a wireless alert system integrated with Iwa’s platform. Used Claude Code to accelerate development.',
       },
       {
         label: 'Testing',
