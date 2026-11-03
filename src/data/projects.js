@@ -112,7 +112,7 @@ export const projects = [
       'Auger soil sampling system designed in SolidWorks and built with FDM/SLS 3D printing and CNC machining for the University Rover Challenge.',
     card: '/images/auger-card.jpg',
     timeline: 'Jan to Mar 2025',
-    tags: ['SolidWorks', '3D Printing', 'CNC'],
+    tags: ['SolidWorks', '3D Printing', 'CNC', 'Rapid Prototyping', 'Mechanical Design', 'STM32', 'Sensor Integration'],
     sections: [
       {
         label: 'Problem',
