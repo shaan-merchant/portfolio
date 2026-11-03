@@ -11,7 +11,7 @@ export const projects = [
       'Raspberry Pi based sensor payload for a drone with a live data GUI and wireless alerts, from systems engineering through field testing. Details under NDA.',
     card: '/images/drone-payload-card.svg',
     timeline: 'Fall 2026',
-    tags: ['Raspberry Pi', 'I2C', 'Sensor Fusion', 'GUI Development', 'Data Logging', 'Fusion 360', 'Field Testing'],
+    tags: ['Raspberry Pi', 'I2C', 'Sensor Fusion', 'JavaScript', 'GUI Development', 'Data Logging', 'Fusion 360', 'Field Testing'],
     sections: [
       {
         label: 'Overview',
@@ -27,7 +27,7 @@ export const projects = [
       },
       {
         label: 'Software',
-        text: 'Developed a GUI that displays live sensor data in graphs with data logging, and a wireless alert system integrated with Iwa’s platform. Used Claude Code to accelerate development.',
+        text: 'Developed a JavaScript GUI that displays live sensor data in graphs with data logging, and a wireless alert system integrated with Iwa’s platform. Used Claude Code to accelerate development.',
       },
       {
         label: 'Testing',
