@@ -72,6 +72,33 @@ export const projects = [
     media: [],
   },
   {
+    slug: 'can-integration',
+    title: 'CAN Integration',
+    org: 'Iwa Robotics',
+    nda: true,
+    ndaNote: 'Parts of this project are under NDA, so no photos or specifics beyond this overview are shared. Happy to discuss what I can in an interview.',
+    summary:
+      'Brought ESCs, GPS, and sensor payloads onto CAN and designed a 15-port CAN splitter PCB, enabling motor health monitoring, RPM telemetry, and diagnostics.',
+    card: '/images/can-card.svg',
+    timeline: 'Fall 2026',
+    tags: ['CAN', 'PCB Design', 'Autodesk Fusion', 'ESCs', 'Telemetry', 'Diagnostics', 'Crimping', 'Soldering'],
+    sections: [
+      {
+        label: 'Problem',
+        text: 'Get richer telemetry from the drone motors, such as current draw, to support health monitoring and diagnostics across our aircraft.',
+      },
+      {
+        label: 'Approach',
+        text: 'Configured the CAN protocol on the ESCs, GPS, and sensor payloads to bring them onto a shared bus. Designed a 15-port CAN splitter PCB in Autodesk Fusion to broaden communication across the GPS, motors, and sensors, and built the harnesses through crimping, connector fabrication, and soldering.',
+      },
+      {
+        label: 'Result',
+        text: 'Reduced signal noise and enabled motor health monitoring, RPM telemetry, and diagnostics on our aircraft.',
+      },
+    ],
+    media: [],
+  },
+  {
     slug: 'moteus-n1-interface-pcb',
     title: 'Moteus N1 Interface PCB',
     org: 'NURover',
