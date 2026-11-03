@@ -8,26 +8,26 @@ export const projects = [
     org: 'Iwa Robotics',
     nda: true,
     summary:
-      'Drone-mounted sensor payload built around a Raspberry Pi and I2C sensors, taken from systems engineering through field testing. Details under NDA.',
+      'Raspberry Pi based sensor payload for a drone, from systems engineering through field testing. Details under NDA.',
     card: '/images/drone-payload-card.svg',
     timeline: 'Fall 2026',
     tags: ['Raspberry Pi', 'I2C', 'Sensor Fusion', 'Fusion 360', 'Field Testing'],
     sections: [
       {
         label: 'Overview',
-        text: 'A sensor payload for a drone, developed during my robotics engineering co-op at Iwa Robotics. The specifics are covered by an NDA, so this write-up focuses on my role and process rather than the application.',
+        text: 'Drone sensor payload developed during my co-op at Iwa Robotics. Details are under NDA, so this summary covers my role and process.',
       },
       {
         label: 'My Role',
-        text: 'Handled systems engineering for the payload, taking the device from requirements through integration on the drone. The system is built around a Raspberry Pi, with I2C handling communication between the Pi and the onboard sensors.',
+        text: 'Handled systems engineering from requirements through integration on the drone. Built the system around a Raspberry Pi, using I2C to communicate with the onboard sensors.',
       },
       {
         label: 'Build',
-        text: 'Assembled and debugged the electronics by hand with soldering and a multimeter, and used Fusion 360 and 3D printing to fit the hardware onto the drone. Used Claude Code to speed up development of the software running on the Pi.',
+        text: 'Assembled and debugged the electronics through soldering and multimeter testing. Used Fusion 360 and 3D printing to mount the hardware to the drone, and Claude Code to accelerate software development on the Pi.',
       },
       {
         label: 'Testing',
-        text: 'Tested and calibrated the full system on the drone, including field testing, and applied sensor fusion to combine readings from multiple sensors into reliable data.',
+        text: 'Tested and calibrated the system on the drone through field testing, applying sensor fusion to combine readings from multiple sensors into reliable data.',
       },
     ],
     media: [],
