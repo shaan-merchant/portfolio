@@ -48,7 +48,7 @@ export const projects = [
     sections: [
       {
         label: 'Problem',
-        text: 'Stabilize drone camera video in flight and deliver the feed to both the flight controller and an NVIDIA Jetson. The design had to be NDAA compliant, and store-bought gimbals that met these requirements were costly.',
+        text: 'Stabilize drone camera video in flight and deliver the feed to both the flight controller and an NVIDIA Jetson for onboard processing. The design had to be NDAA compliant, and store-bought gimbals that met these requirements were costly.',
       },
       {
         label: 'Prototyping',
@@ -56,11 +56,11 @@ export const projects = [
       },
       {
         label: 'Current Design',
-        text: 'Redesigned around brushless motors with through holes, routing power for the motors, encoders, IMU, and cameras internally through the frame. A 3-axis gimbal controller connects the IMU, encoders, and motor drivers over I2C, and a custom PCB I designed interfaces the cameras with the Jetson.',
+        text: 'Redesigned around brushless gimbal motors with through holes, routing power and signal lines for the motors, encoders, IMU, and cameras internally through the frame. A 3-axis gimbal controller connects the IMU, encoders, and motor drivers over I2C, and a custom PCB I designed interfaces the cameras with the Jetson.',
       },
       {
         label: 'Result',
-        text: 'Developed a Python PID simulation tool with Claude Code to determine starting gains for each axis. Reduced cost by roughly 60% compared to a store-bought gimbal.',
+        text: 'Developed a Python PID simulation tool with Claude Code to determine starting gains for each axis, reducing vibration and jitter. Reduced cost by roughly 60% compared to a store-bought gimbal.',
       },
       {
         label: 'Next Steps',
